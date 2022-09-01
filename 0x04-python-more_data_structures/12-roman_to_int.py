@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 def roman_to_int(roman_string):
+    if not type(roman_string) is str:
+        return 0
     symbols = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
     sub = {'I': "VX", 'X': "LC", 'C': "DM"}
     value = 0

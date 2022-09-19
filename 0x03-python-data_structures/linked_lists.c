@@ -57,26 +57,6 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 }
 
 /**
- * get_node_at_index - Get the node at index object
- *
- * @head:  pointer to pointer of first node of listint_t list
- * @idx: index to access
- * Return: address of the idx th element or NULL if it fails
- */
-listint_t *get_node_at_index(listint_t *head, size_t idx)
-{
-	if (head == NULL || idx == 0)
-	{
-		return (head);
-	}
-	if (head->next == NULL)
-	{
-		return (NULL);
-	}
-	return (get_node_at_index(head->next, (idx - 1)));
-}
-
-/**
  * free_listint - frees a listint_t list
  * @head: pointer to list to be freed
  * Return: void
@@ -91,25 +71,4 @@ void free_listint(listint_t *head)
 		head = head->next;
 		free(current);
 	}
-}
-
-/**
- * get_list_length - number of nodes
- * @h: pointer to head of list
- * Return: number of nodes
- */
-size_t get_list_length(const listint_t *h)
-{
-	const listint_t *current;
-	unsigned int n; /* number of nodes */
-
-	current = h;
-	n = 0;
-	while (current != NULL)
-	{
-		current = current->next;
-		n++;
-	}
-
-	return (n);
 }

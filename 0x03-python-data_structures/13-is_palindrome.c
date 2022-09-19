@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "lists.h"
+
+listint_t *get_node_at_index(listint_t *head, size_t idx);
+size_t get_list_length(const listint_t *h);
 /**
  * is_palindrome - check if it's palindrom or not
  *
@@ -36,4 +39,45 @@ int is_palindrome(listint_t **head)
 	}
 
 	return (1);
+}
+
+/**
+ * get_list_length - number of nodes
+ * @h: pointer to head of list
+ * Return: number of nodes
+ */
+size_t get_list_length(const listint_t *h)
+{
+	const listint_t *current;
+	unsigned int n; /* number of nodes */
+
+	current = h;
+	n = 0;
+	while (current != NULL)
+	{
+		current = current->next;
+		n++;
+	}
+
+	return (n);
+}
+
+/**
+ * get_node_at_index - Get the node at index object
+ *
+ * @head:  pointer to pointer of first node of listint_t list
+ * @idx: index to access
+ * Return: address of the idx th element or NULL if it fails
+ */
+listint_t *get_node_at_index(listint_t *head, size_t idx)
+{
+	if (head == NULL || idx == 0)
+	{
+		return (head);
+	}
+	if (head->next == NULL)
+	{
+		return (NULL);
+	}
+	return (get_node_at_index(head->next, (idx - 1)));
 }

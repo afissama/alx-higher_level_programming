@@ -49,13 +49,13 @@ class Rectangle:
         """
         if self.width == 0 or self.height == 0:
             return ""
-        return "\n".join(["".join([("#" * self.width)])] * self.height)
+        return "\n" . join(["" . join([("#" * self.width)])] * self.height)
 
     def __repr__(self):
         """String representation
         Rectange
         """
-        return "Rectangle(" + str(self.width) + ", " + str(self.height) +")"
+        return "Rectangle(" + str(self.width) + ", " + str(self.height) + ")"
 
     width = property(__get_width, __set_width)
     height = property(__get_height, __set_height)

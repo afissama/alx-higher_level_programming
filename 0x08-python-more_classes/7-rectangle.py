@@ -11,7 +11,7 @@ class Rectangle:
         """Initializes the data."""
         self.__set_height(height)
         self.__set_width(width)
-        Rectangle.number_of_instances +=1
+        Rectangle.number_of_instances += 1
 
     def __get_width(self):
         """ Get the width """
@@ -53,18 +53,20 @@ class Rectangle:
         """
         if self.width == 0 or self.height == 0:
             return ""
-        return "\n".join(["".join([(str(self.print_symbol) * self.width)])] * self.height)
+        return "\n" . join(["" . join([
+                                        (str(self.print_symbol) * self.width)
+                                    ])] * self.height)
 
     def __repr__(self):
         """String representation
         Rectange
         """
-        return "Rectangle(" + str(self.width) + ", " + str(self.height) +")"
+        return "Rectangle(" + str(self.width) + ", " + str(self.height) + ")"
 
     def __del__(self):
         """Call when deleting"""
         print("Bye rectangle...")
-        Rectangle.number_of_instances -=1
+        Rectangle.number_of_instances -= 1
 
     width = property(__get_width, __set_width)
     height = property(__get_height, __set_height)

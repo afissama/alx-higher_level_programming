@@ -49,7 +49,7 @@ class Rectangle:
         return "\n".join(["".join([("#" * self.width)])] * self.height)
 
     def __repr__(self):
-        return "Rectangle(" + str(self.width) + ", " + str(self.height) +")"
+        return "Rectangle(" + str(self.width) + ", " + str(self.height) + ")"
 
     def __del__(self):
         """Call when deleting"""

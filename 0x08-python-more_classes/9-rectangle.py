@@ -82,7 +82,9 @@ class Rectangle:
     @classmethod
     def square(cls, size=0):
         """Class method to create a square"""
-        return Rectangle(size, size)
+        cls.width = size
+        cls.height = size
+        return cls
 
     width = property(__get_width, __set_width)
     height = property(__get_height, __set_height)

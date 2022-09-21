@@ -4,8 +4,10 @@ This module supplies one function its add two integer example
 >>> add_integer(4, 3)
 7
 """
+
+
 def add_integer(a, b=98):
-    """ 
+    """
     Returns a+b
     """
     a_ = 0
@@ -18,5 +20,5 @@ def add_integer(a, b=98):
         b_ = int(b)
     except Exception:
         raise TypeError("b must be an integer")
-    
+
     return (a_ + b_)

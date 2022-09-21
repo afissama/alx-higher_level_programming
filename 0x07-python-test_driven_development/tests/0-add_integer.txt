@@ -1,0 +1,21 @@
+>>> add_integer = __import__('0-add_integer').add_integer
+>>> add_integer(1, 2)
+3
+>>> add_integer(5, 5)
+10
+>>> add_integer(2.3, 3)
+5
+>>> add_integer(7, 2)
+9
+>>> add_integer(5, 105)
+110
+>>> add_integer(2.3, 30)
+32
+>>> add_integer("iot", 56)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+>>> add_integer(52, "not")
+Traceback (most recent call last):
+...
+TypeError: b must be an integer

@@ -48,11 +48,17 @@ class Rectangle:
         return 2*(self.height + self.width)
 
     def __str__(self):
+        """String representation
+        Rectange
+        """
         if self.width == 0 or self.height == 0:
             return ""
         return "\n".join(["".join([(str(self.print_symbol) * self.width)])] * self.height)
 
     def __repr__(self):
+        """String representation
+        Rectange
+        """
         return "Rectangle(" + str(self.width) + ", " + str(self.height) +")"
 
     def __del__(self):
@@ -61,6 +67,7 @@ class Rectangle:
         Rectangle.number_of_instances -=1
 
     def bigger_or_equal(rect_1, rect_2):
+        """Return the bigger Rectange"""
         if not isinstance(rect_1, Rectangle):
             raise TypeError("rect_1 must be an instance of Rectangle")
         if not isinstance(rect_2, Rectangle):
@@ -69,6 +76,7 @@ class Rectangle:
 
     @classmethod
     def square(cls, size=0):
+        """Class method to create a square"""
         return Rectangle(size, size)
 
     width = property(__get_width, __set_width)

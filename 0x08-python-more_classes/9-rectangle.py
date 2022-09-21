@@ -60,5 +60,16 @@ class Rectangle:
         print("Bye rectangle...")
         Rectangle.number_of_instances -=1
 
+    def bigger_or_equal(rect_1, rect_2):
+        if not isinstance(rect_1, Rectangle):
+            raise TypeError("rect_1 must be an instance of Rectangle")
+        if not isinstance(rect_2, Rectangle):
+            raise TypeError("rect_2 must be an instance of Rectangle")
+        return rect_2 if (rect_2.area() > rect_1.area()) else rect_1
+
+    @classmethod
+    def square(cls, size=0):
+        return Rectangle(size, size)
+
     width = property(__get_width, __set_width)
     height = property(__get_height, __set_height)

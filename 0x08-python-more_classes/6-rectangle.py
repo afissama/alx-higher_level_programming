@@ -3,9 +3,9 @@
 
 class Rectangle:
     """ Simple class Rectangle"""
-    
+
     number_of_instances = 0
-    
+
     def __init__(self, width=0, height=0):
         """Initializes the data."""
         self.__set_height(height)
@@ -23,7 +23,7 @@ class Rectangle:
         if value < 0:
             raise ValueError("width must be >= 0")
         self.__width = value
-    
+
     def __get_height(self):
         """ Get the height """
         return self.__height
@@ -35,11 +35,11 @@ class Rectangle:
         if value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
-    
+
     def area(self):
         """ Returns the rectangle area"""
         return self.__height * self.__width
-    
+
     def perimeter(self):
         """ Compute perimeter """
         if self.width == 0 or self.height == 0:
@@ -50,7 +50,7 @@ class Rectangle:
         if self.width == 0 or self.height == 0:
             return ""
         return "\n".join(["".join([("#" * self.width)])] * self.height)
-    
+
     def __repr__(self):
         return "Rectangle(" + str(self.width) + ", " + str(self.height) +")"
 

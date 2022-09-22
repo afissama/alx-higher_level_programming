@@ -1,0 +1,33 @@
+## Import module
+>>> square = __import__("4-print_square").print_square
+
+## Correct Inputs
+>>> square(3)
+###
+###
+###
+
+>>> square(4)
+####
+####
+####
+####
+
+>>> square(0)
+<BLANKLINE>
+
+## Incorrect Inputs
+>>> square(-3)
+Traceback (most recent call last):
+...
+ValueError: size must be >= 0
+
+>>> square("pol")
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
+
+>>> square(-3.2)
+Traceback (most recent call last):
+...
+TypeError: size must be an integer

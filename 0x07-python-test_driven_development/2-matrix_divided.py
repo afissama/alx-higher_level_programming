@@ -5,6 +5,8 @@
 This is a simple module which contains one function
 perform divison on a given matrix
 """
+
+
 def matrix_divided(matrix, div):
     """
     Return a new matrix with values divided per div
@@ -18,6 +20,7 @@ def matrix_divided(matrix, div):
     try:
         return [([round((val / div), 2) for val in row]) for row in matrix]
     except TypeError:
-        raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+        raise TypeError("matrix must be a matrix " +
+                        "(list of lists) of integers/floats")
     except ZeroDivisionError:
         raise ZeroDivisionError("division by zero")

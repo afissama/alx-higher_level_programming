@@ -1,0 +1,38 @@
+### import module
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+### Correct inputs cases
+>>> say_my_name("afis", "Malick")
+My name is afis Malick
+
+>>> say_my_name("afis", "Sama")
+My name is afis Sama
+
+>>> say_my_name("afis")
+My name is afis 
+
+### Incorrect first_name
+###
+###
+>>> say_my_name(78, "Sama")
+Traceback (most recent call last):
+...
+TypeError: first_name must be a string
+
+>>> say_my_name([1, 2], "Sama")
+Traceback (most recent call last):
+...
+TypeError: first_name must be a string
+
+### Incorrect last_name
+###
+###
+>>> say_my_name("Afis", 56)
+Traceback (most recent call last):
+...
+TypeError: last_name must be a string
+
+>>> say_my_name("Sama", [1, 2])
+Traceback (most recent call last):
+...
+TypeError: last_name must be a string

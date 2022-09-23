@@ -10,15 +10,16 @@ def add_integer(a, b=98):
     """
     Returns a+b
     """
-    a_ = 0
-    b_ = 0
-    try:
-        a_ = int(a)
-    except Exception:
+
+    if not (isinstance(a, int) or isinstance(a, float)):
         raise TypeError("a must be an integer")
-    try:
-        b_ = int(b)
-    except Exception:
+
+    if not (isinstance(b, int) or isinstance(b, float)):
         raise TypeError("b must be an integer")
 
-    return (a_ + b_)
+    if isinstance(a, float):
+        a = int(a)
+    if isinstance(b, float):
+        b = int(b)
+
+    return (a + b)

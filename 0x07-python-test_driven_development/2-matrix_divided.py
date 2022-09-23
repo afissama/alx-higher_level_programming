@@ -18,6 +18,11 @@ def matrix_divided(matrix, div):
         if row_len != len(_row):
             raise TypeError("Each row of the matrix must have the same size")
     try:
+        div = float(div)
+    except (TypeError, ValueError):
+        raise TypeError("div must be a number")
+
+    try:
         return [([round((val / div), 2) for val in row]) for row in matrix]
     except TypeError:
         raise TypeError("matrix must be a matrix " +

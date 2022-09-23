@@ -30,3 +30,9 @@ TypeError: matrix_divided() missing 1 required positional argument: 'div'
 Traceback (most recent call last):
 ...
 TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
+
+##Same row test
+>>> matrix_divided([[1,0,3]], "ok")
+Traceback (most recent call last):
+...
+TypeError: div must be a number

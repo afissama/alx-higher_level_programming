@@ -12,4 +12,4 @@ def text_indentation(text):
     _t = _t.replace("? ", "?").replace("?", "?\n\n")
     _t = _t.replace(": ", ":").replace(":", ":\n\n")
 
-    print(_t)
+    print("{}".format(_t), end="")

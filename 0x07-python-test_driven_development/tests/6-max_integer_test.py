@@ -25,3 +25,15 @@ class TestMaxInteger(unittest.TestCase):
         current = max_integer([])
         expected = None
         self.assertEqual(current, expected)
+
+    def test_one(self):
+        """ Test for empty array """
+        current = max_integer([5])
+        expected = 5
+        self.assertEqual(current, expected)
+
+    def test_middle(self):
+        """ Test for empty array """
+        current = max_integer([5, 15, 3])
+        expected = 15
+        self.assertEqual(current, expected)

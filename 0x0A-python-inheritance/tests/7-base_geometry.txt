@@ -35,6 +35,10 @@ Traceback (most recent call last):
 ...
 TypeError: my_int must be an integer
 
+### not integer
+>>> bg.integer_validator(45, "oal")
+
+
 
 ### missing one argument
 >>> bg.integer_validator("my_int")

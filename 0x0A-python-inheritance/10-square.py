@@ -10,3 +10,7 @@ class Square(Rectangle):
     def __init__(self, size):
         """Call while instantiate the class"""
         super().__init__(size, size)
+
+    def area(self):
+        """Compute the Squre Area"""
+        return super().area()

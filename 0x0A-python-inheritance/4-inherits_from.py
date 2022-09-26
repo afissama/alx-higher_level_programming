@@ -4,6 +4,7 @@
     => inherits_from(obj, a_class):
 """
 
+
 def inherits_from(obj, a_class):
     """
     Check if obj inherit from a_class

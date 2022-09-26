@@ -16,6 +16,19 @@ Traceback (most recent call last):
 ...
 ValueError: my_int must be greater than 0
 
+### float inf value
+>>> bg.integer_validator("my_int", float('inf'))
+Traceback (most recent call last):
+...
+TypeError: my_int must be an integer
+
+### float value
+>>> bg.integer_validator("my_int", 2.5)
+Traceback (most recent call last):
+...
+TypeError: my_int must be an integer
+
+
 ### not integer
 >>> bg.integer_validator("my_int", "oal")
 Traceback (most recent call last):

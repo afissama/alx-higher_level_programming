@@ -41,6 +41,13 @@ Traceback (most recent call last):
 ...
 TypeError: val must be an integer
 
+### not integer
+>>> bg.integer_validator(None, 12)
+Traceback (most recent call last):
+...
+TypeError: val must be an integer
+
+
 ### missing one argument
 >>> bg.integer_validator("my_int")
 Traceback (most recent call last):

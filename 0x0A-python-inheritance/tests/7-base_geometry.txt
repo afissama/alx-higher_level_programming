@@ -36,9 +36,10 @@ Traceback (most recent call last):
 TypeError: my_int must be an integer
 
 ### not integer
->>> bg.integer_validator(45, "oal")
-
-
+>>> bg.integer_validator("val", None)
+Traceback (most recent call last):
+...
+TypeError: val must be an integer
 
 ### missing one argument
 >>> bg.integer_validator("my_int")

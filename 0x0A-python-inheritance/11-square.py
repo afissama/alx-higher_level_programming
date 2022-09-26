@@ -12,5 +12,9 @@ class Square(Rectangle):
         super().__init__(size, size)
         self.__width = self.__height = size
 
+    def area(self):
+        """Raise an exception"""
+        super().area()
+
     def __str__(self):
         return "[Square] " + str(self.__width) + "/" + str(self.__height)

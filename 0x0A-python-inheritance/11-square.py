@@ -10,7 +10,7 @@ class Square(Rectangle):
     def __init__(self, size):
         """Call while instantiate the class"""
         super().__init__(size, size)
-        self.__width = self.__height = size
+        self.__size = size
 
     def __str__(self):
-        return "[Square] " + str(self.__width) + "/" + str(self.__height)
+        return "[Square] " + str(self.__size) + "/" + str(self.__size)

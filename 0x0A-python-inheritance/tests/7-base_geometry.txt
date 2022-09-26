@@ -10,6 +10,12 @@ Traceback (most recent call last):
 ...
 ValueError: my_int must be greater than 0
 
+### negative value
+>>> bg.integer_validator("my_int", 0)
+Traceback (most recent call last):
+...
+ValueError: my_int must be greater than 0
+
 ### not integer
 >>> bg.integer_validator("my_int", "oal")
 Traceback (most recent call last):

@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Thia module use json to save object to file
+This module use json to save object to file
 """
 
 import json

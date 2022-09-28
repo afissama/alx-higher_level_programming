@@ -24,12 +24,12 @@ class Student:
         based on attrs.
         """
         is_list_of_str = 0
-        if isinstance(attrs, list) and len(attrs)>1:
+        if isinstance(attrs, list) and len(attrs) > 1:
             for i in attrs:
                 if not isinstance(i, str):
                     break
             is_list_of_str = 1
-        
+
         if is_list_of_str == 0:
             tmp = {}
             for x in sorted(vars(self).keys()):

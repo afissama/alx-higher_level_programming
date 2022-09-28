@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-"""This Module contains 
+"""This Module contains
 function that read a text file
 and prints it to stdout
 """

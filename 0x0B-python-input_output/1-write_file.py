@@ -2,6 +2,8 @@
 """This module contains
     =>write_file
 """
+
+
 def write_file(filename="", text=""):
     """This function writes a string into txt file
     """

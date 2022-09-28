@@ -2,9 +2,8 @@
 """
 This module use json to save object to file
 """
-
-
 import json
+
 
 def load_from_json_file(filename):
     """

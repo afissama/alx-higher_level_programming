@@ -16,7 +16,7 @@ class BaseGeometry:
         """Validates Integer values and raises
         exception if necessary
         """
-        if not type(value) == int:
+        if not isinstance(value, int):
             raise TypeError(str(name) + " must be an integer")
         if value <= 0:
             raise ValueError(str(name) + " must be greater than 0")
